@@ -245,6 +245,7 @@ class PuzzleVisualization {
 
         this.canvasWidth = width
         this.canvasHeight = height
+        this.render()
     }
 
     @action.bound beginAnimation() {
@@ -256,8 +257,9 @@ class PuzzleVisualization {
             if (!start) start = timestamp
             const timePassed = timestamp-start
             const fracPassed = Math.min(timePassed / this.drawTime, 1)
-            this.step = Math.floor(fracPassed * this.puzzle.endstep)    
-            this.animationHandle = requestAnimationFrame(frame)
+            this.step = Math.floor(fracPassed * this.puzzle.endstep) 
+            if (fracPassed < 1)
+                this.animationHandle = requestAnimationFrame(frame)
         }
         this.animationHandle = requestAnimationFrame(frame)
     }
