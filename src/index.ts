@@ -1,7 +1,5 @@
 import * as _ from 'lodash'
 import './index.scss'
-import * as d3 from 'd3-scale'
-import * as d3_chromatic from 'd3-scale-chromatic'
 import { observable, computed, action, autorun } from 'mobx'
 const log = console.log
 
