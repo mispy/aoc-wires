@@ -1,0 +1,97 @@
+@import "~bootstrap/scss/bootstrap.scss";
+
+body { margin: 0; }
+
+q {
+	font-style: italic;
+}
+
+.form-check > * {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+    cursor: pointer;
+}
+
+textarea {
+	width: 100%;
+	min-height: 250px;
+	height: 20vh;
+}
+
+.credits {
+	opacity: 0.8;
+	font-size: 0.9em;
+}
+
+.largerRange {
+	color: #5e4fa2;
+	font-weight: bold;
+}
+
+.smallerRange {
+	color: #e7e98e;
+	font-weight: bold;
+}
+
+.originPoint {
+	color: #03d000;
+	font-weight: bold;
+}
+
+#viz {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	touch-action: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+h1 {
+	font-size: 2em;
+	margin-bottom: 0.8em;
+}
+
+@media (min-width: 801px) {
+	#root {
+		display: flex;
+		flex-direction: row-reverse;
+	}
+	#ui {
+		min-width: 500px;
+		max-width: 500px;
+		padding: 2rem;
+		flex-grow: 1;
+		opacity: 0.9;
+	}
+	#viz {
+		width: 100%;
+		height: 100vh;
+		overflow: hidden;
+	}
+}
+
+@media (max-width: 800px) {
+	html {
+		font-size: 14px;
+	}
+
+	#viz {
+		width: 100vw;
+		height: 75vh;
+	}
+
+	#ui {
+		border-top: 1px solid #ccc;
+		padding: 2rem;
+	}
+}
