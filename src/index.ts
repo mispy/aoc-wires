@@ -302,7 +302,7 @@ class PuzzleVisualization {
 
         for (const wire of this.puzzle.wires) {
             this.ctx.strokeStyle = wire === this.puzzle.wires[0] ? "#fc8d59" : "#91bfdb"
-            this.ctx.lineWidth = Math.ceil(this.cellPixelSize)
+            this.ctx.lineWidth = Math.ceil(this.cellPixelSize)*2
             this.ctx.beginPath()
             this.ctx.moveTo(origin.x, origin.y)
             this.drawWire(wire)
@@ -337,6 +337,7 @@ class PuzzleVisualization {
                 this.ctx.arc(rp.x, rp.y, 6, 0, 2*Math.PI)
                 this.ctx.fill()
 
+                this.ctx.lineWidth = 1
                 this.ctx.strokeStyle = "#ffff66"
                 this.ctx.font = "10px Arial"
                 this.ctx.textBaseline = 'middle'
@@ -350,6 +351,7 @@ class PuzzleVisualization {
             if (fastestIntersection && fastestIntersection.step <= this.step) {
                 const rp = this.toRenderSpace(fastestIntersection.point)
 
+                this.ctx.lineWidth = 1
                 this.ctx.fillStyle = "#0f0f23"
                 this.ctx.beginPath()
                 this.ctx.arc(rp.x, rp.y, 6, 0, 2*Math.PI)

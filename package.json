@@ -1,7 +1,10 @@
 {
+  "homepage": "https//aldens.github.io/aoc-wires",
   "scripts": {
     "dev": "webpack-dev-server",
-    "build": "rm -rf build/* && webpack -p"
+    "build": "rm -rf build/* && webpack -p",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build" 
   },
   "dependencies": {
     "@types/d3-scale": "^2.1.0",
@@ -29,5 +32,8 @@
     "webpack-cli": "^2.0.12",
     "webpack-dev-server": "^3.1.1",
     "webpack-manifest-plugin": "^2.0.0-rc.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.1.1"
   }
 }
