@@ -1,5 +1,5 @@
 {
-  "homepage": "https//aldens.github.io/aoc-wires",
+  "homepage": "https//foldspark.github.io/aoc-wires",
   "scripts": {
     "dev": "webpack-dev-server",
     "build": "rm -rf build/* && webpack -p",
