@@ -1,5 +1,5 @@
 {
-  "homepage": "https//jakesyndal.com/aoc-wires",
+  "homepage": "https//jsyndal.com/aoc-wires",
   "scripts": {
     "dev": "webpack-dev-server",
     "build": "rm -rf build/* && webpack -p"
