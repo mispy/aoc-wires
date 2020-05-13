@@ -1,3 +1,0 @@
-[context.production]
-  [context.production.environment]
-    BASE_PATH = "/aoc-wires"
