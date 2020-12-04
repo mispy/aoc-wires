@@ -1,9 +1,8 @@
 const path = require('path')
-const webpack = require('webpack')
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const ManifestPlugin = require('webpack-manifest-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const sass = require('sass')
 
 const BASE_PATH = process.env.BASE_PATH
 
@@ -40,7 +39,7 @@ module.exports = (env, argv) => {
                 },
                 {
                     test: /\.scss$/,
-                    loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: ['css-loader?modules&importLoaders=1&localIdentName=[local]', 'sass-loader'] })
+                    loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: ['css-loader?modules&importLoaders=1&localIdentName=[local]', { loader: 'sass-loader', options: { implementation: sass }}] })
                 },
                 {
                     test: /\.(jpe?g|gif|png|eot|woff|ttf|svg|woff2)$/,
